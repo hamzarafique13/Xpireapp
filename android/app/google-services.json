@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "990747966964",
+    "project_id": "xpiree-39aa9",
+    "storage_bucket": "xpiree-39aa9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990747966964:android:1eb41d8adf0dd7149e0da1",
+        "android_client_info": {
+          "package_name": "com.xpireedev.testdemoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990747966964-tacb3aprjev66qhr8kvfo74ots74lc5s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrEoQnDOggQJKfHdOXjSV7syTMEGJL5Qg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990747966964-tacb3aprjev66qhr8kvfo74ots74lc5s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
