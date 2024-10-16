@@ -635,7 +635,7 @@ class FolderListState extends State<FolderList> {
                                     crossAxisCount: 2,
                                     crossAxisSpacing: 4.0,
                                     mainAxisSpacing: 10.0,
-                                    childAspectRatio: 1.1
+                                    childAspectRatio: 1
                                     // MediaQuery.of(context).size.width /
                                     //     (MediaQuery.of(context).size.height / 1),
                                     ),
@@ -1358,7 +1358,7 @@ class FolderListState extends State<FolderList> {
                                 },
                                 child: Container(
                                   width:
-                                      MediaQuery.of(context).size.width * 0.25,
+                                      MediaQuery.of(context).size.width * 0.35,
                                   padding: const EdgeInsets.all(5),
                                   alignment: Alignment.center,
                                   decoration: BoxDecoration(

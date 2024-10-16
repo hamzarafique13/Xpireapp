@@ -14,6 +14,8 @@ import 'package:Xpiree/Shared/UI/CustomColorScheme.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:lottie/lottie.dart';
 
+import '../../Dashboard/UI/notification.dart';
+
 class SavedDocument extends StatefulWidget {
   const SavedDocument({Key? key}) : super(key: key);
 
@@ -1516,10 +1518,18 @@ class SavedDocumentState extends State<SavedDocument>
                         width: 4,
                       ),
                       GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const NotificationInfo()),
+                            );
+                          },
                           child: Image.asset(
-                        'assets/images/sms.png',
-                        scale: 2.4,
-                      ))
+                            'assets/images/sms.png',
+                            scale: 2.4,
+                          ))
                     ]),
                   ],
                 ),
@@ -2003,7 +2013,7 @@ class SavedDocumentState extends State<SavedDocument>
                                         },
                                         child: Padding(
                                           padding: const EdgeInsets.symmetric(
-                                              horizontal: 24.0),
+                                              horizontal: 24),
                                           child: Container(
                                             height: 86,
                                             width: double.infinity,
@@ -2029,18 +2039,21 @@ class SavedDocumentState extends State<SavedDocument>
                                                         CrossAxisAlignment
                                                             .start,
                                                     children: [
-                                                      const Text(
-                                                        'Apply for passport refusal Scan ',
-                                                        overflow: TextOverflow
-                                                            .ellipsis,
-                                                        maxLines: 1,
-                                                        style: TextStyle(
-                                                            color: Color(
-                                                                0xff475467),
-                                                            fontSize: 16,
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w500),
+                                                      const SizedBox(
+                                                        width: 220,
+                                                        child: Text(
+                                                          'Apply for passport refusal Scan ',
+                                                          overflow: TextOverflow
+                                                              .ellipsis,
+                                                          maxLines: 1,
+                                                          style: TextStyle(
+                                                              color: Color(
+                                                                  0xff475467),
+                                                              fontSize: 16,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w500),
+                                                        ),
                                                       ),
                                                       SizedBox(
                                                         height: 5,
@@ -2133,15 +2146,21 @@ class SavedDocumentState extends State<SavedDocument>
                                                     Flexible(
                                                       child: Row(
                                                         children: [
-                                                          const Text(
-                                                            'previous copies of pass',
-                                                            style: TextStyle(
-                                                                color: Color(
-                                                                    0xff475467),
-                                                                fontSize: 16,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w500),
+                                                          const SizedBox(
+                                                            width: 175,
+                                                            child: Text(
+                                                              'previous copies of pass',
+                                                              overflow:
+                                                                  TextOverflow
+                                                                      .ellipsis,
+                                                              style: TextStyle(
+                                                                  color: Color(
+                                                                      0xff475467),
+                                                                  fontSize: 16,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w500),
+                                                            ),
                                                           ),
                                                           const SizedBox(
                                                             width: 8,

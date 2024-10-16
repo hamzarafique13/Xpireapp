@@ -649,50 +649,57 @@ Future<dynamic> confirmExitApp(BuildContext context) {
               ),
             ),
             actions: [
-              Container(
-                width: MediaQuery.of(context).size.width * 0.35,
-                padding: const EdgeInsets.all(10),
-                child: TextButton(
-                  style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        side: BorderSide(
-                            color:
-                                Theme.of(context).colorScheme.warmGreyColor)),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.35,
+                    padding: const EdgeInsets.all(10),
+                    child: TextButton(
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            side: BorderSide(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .warmGreyColor)),
+                      ),
+                      child: Text(
+                        "Return",
+                        style: TextStyle(
+                            color: Theme.of(context).colorScheme.blackColor),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).pop(false);
+                      },
+                    ),
                   ),
-                  child: Text(
-                    "Return",
-                    style: TextStyle(
-                        color: Theme.of(context).colorScheme.blackColor),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pop(false);
-                  },
-                ),
+                  Container(
+                    width: MediaQuery.of(context).size.width * 0.35,
+                    padding: const EdgeInsets.all(10),
+                    child: TextButton(
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0,
+                        primary: Theme.of(context).primaryColor,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                            side: BorderSide(
+                                color: Theme.of(context).primaryColor)),
+                      ),
+                      child: Text(
+                        "Yes",
+                        style: TextStyle(
+                            color: Theme.of(context).colorScheme.whiteColor),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).pop(true);
+                      },
+                    ),
+                  )
+                ],
               ),
-              Container(
-                width: MediaQuery.of(context).size.width * 0.35,
-                padding: const EdgeInsets.all(10),
-                child: TextButton(
-                  style: ElevatedButton.styleFrom(
-                    elevation: 0,
-                    primary: Theme.of(context).primaryColor,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        side:
-                            BorderSide(color: Theme.of(context).primaryColor)),
-                  ),
-                  child: Text(
-                    "Yes",
-                    style: TextStyle(
-                        color: Theme.of(context).colorScheme.whiteColor),
-                  ),
-                  onPressed: () {
-                    Navigator.of(context).pop(true);
-                  },
-                ),
-              )
             ],
           ));
 }

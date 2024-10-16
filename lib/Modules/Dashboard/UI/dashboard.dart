@@ -1080,38 +1080,43 @@ class DashboardState extends State<Dashboard>
                                         }),
                                         child: Container(
                                           height: 35,
-                                          width: 99,
+                                          // width: 99,
                                           decoration: BoxDecoration(
                                             color: const Color(0xffFFFFFF),
                                             borderRadius:
                                                 BorderRadius.circular(6),
                                           ),
-                                          child: Row(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            children: [
-                                              Text(
-                                                'Show All',
-                                                style: CustomTextStyle
-                                                    .simple12Text
-                                                    .copyWith(
-                                                        fontSize: 12,
-                                                        color: const Color(
-                                                            0xffA7A8BB),
-                                                        fontWeight:
-                                                            FontWeight.w700),
-                                              ),
-                                              const SizedBox(
-                                                width: 10,
-                                              ),
-                                              const Icon(
-                                                Icons
-                                                    .keyboard_arrow_down_rounded,
-                                                color: const Color(0xff7E8299),
-                                              )
-                                            ],
+                                          child: Padding(
+                                            padding: EdgeInsets.only(
+                                                left: 8, top: 8, bottom: 8),
+                                            child: Row(
+                                              crossAxisAlignment:
+                                                  CrossAxisAlignment.center,
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                Text(
+                                                  'Show All',
+                                                  style: CustomTextStyle
+                                                      .simple12Text
+                                                      .copyWith(
+                                                          fontSize: 12,
+                                                          color: const Color(
+                                                              0xffA7A8BB),
+                                                          fontWeight:
+                                                              FontWeight.w700),
+                                                ),
+                                                // const SizedBox(
+                                                //   width: 10,
+                                                // ),
+                                                const Icon(
+                                                  Icons
+                                                      .keyboard_arrow_down_rounded,
+                                                  color:
+                                                      const Color(0xff7E8299),
+                                                )
+                                              ],
+                                            ),
                                           ),
                                         ),
                                       )

@@ -1729,7 +1729,7 @@ class AddDocumentState extends State<AddDocument> {
                                   children: reminderList.map((list) {
                                     return list.remindValue != 5
                                         ? Container(
-                                            width: 135,
+                                            width: 155,
                                             padding: const EdgeInsets.all(5),
                                             alignment: Alignment.center,
                                             decoration: BoxDecoration(

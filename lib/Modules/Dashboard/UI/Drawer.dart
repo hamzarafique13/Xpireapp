@@ -132,9 +132,7 @@ class MenuDrawerState extends State<MenuDrawer> {
                                 alignment: Alignment.centerLeft,
                                 padding: const EdgeInsets.only(left: 10),
                                 child: Text(
-                                  _user.email.isEmpty
-                                      ? "hamza@gmail.com"
-                                      : _user.email,
+                                  _user.email.isEmpty ? "" : _user.email,
                                   style: CustomTextStyle.topHeading.copyWith(
                                       color: const Color(0xffA7A8BB),
                                       fontWeight: FontWeight.w400),

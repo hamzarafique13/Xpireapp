@@ -80,7 +80,8 @@ class ExpiringCriteriaState extends State<ExpiringCriteria> {
                         controller: criteriaController,
                         style: CustomTextStyle.textBoxStyle,
                         keyboardType: TextInputType.number,
-                        textAlign: TextAlign.right,
+                        textAlign:
+                            TextAlign.center, // Text ko center align karta hai
                         onChanged: (value) {
                           setState(() {
                             if (value.isNotEmpty) {
@@ -93,65 +94,70 @@ class ExpiringCriteriaState extends State<ExpiringCriteria> {
                           fillColor:
                               Theme.of(context).colorScheme.textfiledColor,
                           border: OutlineInputBorder(
-                              borderSide: BorderSide.none,
-                              borderRadius: BorderRadius.circular(6)),
+                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(6),
+                          ),
                           focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide.none,
-                              borderRadius: BorderRadius.circular(6.0)),
+                            borderSide: BorderSide.none,
+                            borderRadius: BorderRadius.circular(6.0),
+                          ),
+                          contentPadding: const EdgeInsets.symmetric(
+                              vertical:
+                                  10.0), // Text ko center align karne mein help karega
                           prefixIcon: IconButton(
-                              padding: EdgeInsets.zero,
-                              icon: Container(
-                                height: 30,
-                                width: 30,
-                                alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                    color: Theme.of(context).primaryColor,
-                                    borderRadius: BorderRadius.circular(6)),
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                    bottom: 10.0,
-                                  ),
-                                  child: Icon(
-                                    Icons.minimize,
-                                    size: 18,
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .whiteColor,
-                                  ),
-                                ),
+                            padding: EdgeInsets.zero,
+                            icon: Container(
+                              height: 30,
+                              width: 30,
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).primaryColor,
+                                borderRadius: BorderRadius.circular(6),
                               ),
-                              onPressed: () {
-                                if (defaultCreteria > 60) {
-                                  defaultCreteria = defaultCreteria - 1;
-                                  criteriaController.text =
-                                      defaultCreteria.toString();
-                                }
-                              }),
-                          suffixIcon: IconButton(
-                              padding: EdgeInsets.zero,
-                              icon: Container(
-                                height: 30,
-                                width: 30,
-                                decoration: BoxDecoration(
-                                    color: Theme.of(context).primaryColor,
-                                    borderRadius: BorderRadius.circular(6)),
+                              child: Padding(
+                                padding: const EdgeInsets.only(bottom: 10.0),
                                 child: Icon(
-                                  Icons.add,
+                                  Icons.minimize,
+                                  size: 18,
                                   color:
                                       Theme.of(context).colorScheme.whiteColor,
-                                  size: 15,
                                 ),
                               ),
-                              onPressed: () {
-                                if (defaultCreteria == 0) {
-                                  defaultCreteria = 60;
-                                }
-                                if (defaultCreteria < 120) {
-                                  defaultCreteria = defaultCreteria + 1;
-                                  criteriaController.text =
-                                      defaultCreteria.toString();
-                                }
-                              }),
+                            ),
+                            onPressed: () {
+                              if (defaultCreteria > 60) {
+                                defaultCreteria = defaultCreteria - 1;
+                                criteriaController.text =
+                                    defaultCreteria.toString();
+                              }
+                            },
+                          ),
+                          suffixIcon: IconButton(
+                            padding: EdgeInsets.zero,
+                            icon: Container(
+                              height: 30,
+                              width: 30,
+                              decoration: BoxDecoration(
+                                color: Theme.of(context).primaryColor,
+                                borderRadius: BorderRadius.circular(6),
+                              ),
+                              child: Icon(
+                                Icons.add,
+                                color: Theme.of(context).colorScheme.whiteColor,
+                                size: 15,
+                              ),
+                            ),
+                            onPressed: () {
+                              if (defaultCreteria == 0) {
+                                defaultCreteria = 60;
+                              }
+                              if (defaultCreteria < 120) {
+                                defaultCreteria = defaultCreteria + 1;
+                                criteriaController.text =
+                                    defaultCreteria.toString();
+                              }
+                            },
+                          ),
                         ),
                       ),
                     ),
