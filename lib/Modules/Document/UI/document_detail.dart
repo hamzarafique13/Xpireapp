@@ -379,7 +379,7 @@ class DocumentDataState extends State<DocumentData> {
                         Row(
                           children: [
                             Container(
-                              // height: 53,
+                              height: 64,
                               width: 130,
                               decoration: BoxDecoration(
                                   color: Colors.white,
@@ -421,13 +421,13 @@ class DocumentDataState extends State<DocumentData> {
                               ),
                             ),
                             const SizedBox(
-                              width: 12,
+                              width: 10,
                             ),
                             modal.status == 1
                                 ? const SizedBox()
                                 : Container(
-                                    // height: 53,
-                                    width: 130,
+                                    height: 64,
+                                    width: 134,
                                     decoration: BoxDecoration(
                                         color: Colors.white,
                                         borderRadius: BorderRadius.circular(6)),
@@ -460,7 +460,7 @@ class DocumentDataState extends State<DocumentData> {
                                                     : '',
                                             style: TextStyle(
                                                 color: lightgreycolor,
-                                                fontSize: 13,
+                                                fontSize:MediaQuery.of(context).size.width<370?11:13,
                                                 fontWeight: FontWeight.w500),
                                           )
                                         ],
@@ -795,7 +795,7 @@ class DocumentDataState extends State<DocumentData> {
                                                       return list.remindValue !=
                                                               5
                                                           ? Container(
-                                                              width: 135,
+                                                              width: 136,
                                                               padding:
                                                                   const EdgeInsets
                                                                       .all(5),
@@ -821,7 +821,7 @@ class DocumentDataState extends State<DocumentData> {
                                                                   color: Theme.of(
                                                                           context)
                                                                       .primaryColor,
-                                                                  fontSize: 14,
+                                                                  fontSize: 13,
                                                                 ),
                                                               ),
                                                             )
